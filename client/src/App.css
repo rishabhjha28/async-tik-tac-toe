@@ -1,0 +1,200 @@
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.home-page{
+    height: 720px;
+    width: 360px;
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+}
+.bottom-box{
+    width: 328px;
+    height: 56px;
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0px;   
+    cursor: pointer;
+}
+.statusinfobox{
+    width: 328px;
+    height: 56px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0px;   
+    background-color: #FFE79E;
+}
+.notification{
+    width: 300px;
+    height: 74px;
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    color:white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+.home-page-heading{
+    display: flex;
+    margin-top: 174px;
+    margin-bottom: 80px;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+}
+.top-heading{
+    color: #000000;
+    font-size: 36px;
+    font-weight: 400;
+    font-family:'Bilbo';
+}
+.properMargin{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.heading{
+    color: #000000;
+    font-size: 96px;
+    font-weight: 400;
+    font-family:'Bilbo';
+}
+.backArrow{
+    padding-top:18.5px;
+    cursor: pointer;
+    position: relative;
+    right: 170px;
+}
+.top{
+    font-family: 'Epilogue';
+    font-weight: 700;
+    font-size: 14px;
+    color: #333333;
+}
+.main-heading{
+    font-family: 'Epilogue';
+    font-weight: 700;
+    color: #333333;
+    font-size: 28px;
+}
+.top-margin{
+    margin-top: 37px;
+    margin-bottom: 10px;
+}
+form{
+    margin-top: 40px;
+}
+input{
+    padding: 20px 16px 16px;
+    width: 294px;
+    margin: 12px 0px 16px;
+    border-radius: 8px;
+    background-color: #F4F4F4;
+    outline: none;
+    border: none;
+}
+.your-games{
+    margin: 24px 0px; 
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Epilogue';
+}
+.no-games-found{
+    margin-top:175px;
+    font-family: 'Bilbo';
+    font-size: 65px;
+    text-align: center;
+}
+.gamebox{
+    box-shadow: 2px 4px 16px  rgba(0.25, 0.25, 0.25, 0.25);
+    border-radius: 8px;
+    width: 328px;
+    height: 199px;
+    padding: 16px;
+}
+.headinggamebox{
+    padding-bottom: 16px;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'Epilogue';
+}
+.gameboxstatus{
+    padding-bottom: 16px;
+    font-family: 'Epilogue';
+}
+.updat{
+    padding-bottom: 16px;
+    font-size: 12px;
+    color: #3F3F3F;
+    font-family: 'Epilogue';
+}
+.gameboxlist{
+    overflow-y: auto;
+    height: 640px;
+}
+.newGame{
+    position:relative;
+    bottom: 50px;
+    right: 20px;
+    width: 140px;
+    height: 40px;
+    background-color: #270F36;
+    color: white;
+    font-weight: 700;
+    border-radius: 8px;
+    box-shadow: 2px 2px 16px rgba(0, 0, 0, 0.16);
+    font-size: 14px;
+    cursor: pointer;
+}
+.gamewith{
+    margin-top: 35px;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.yourpiece{
+    color:#333333;
+}
+.xpiece{
+    color: #2C8DFF;
+    font-size: 70px;
+    margin-top: -20px;
+}
+.opiece{
+    color: #FF4F4F;
+    font-size: 70px;
+    margin-top: -20px;
+}
+.inpbox{
+    height: 105px;
+    width: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #FFE79E;
+}
+.inpboxrow{
+    display: flex;
+    flex-wrap: wrap ;
+}
+.newButtonContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.bBar{
+    position: relative;
+    bottom: -55px;
+}
+.loginbBar{
+    position: relative;
+    bottom: -240px;
+}
