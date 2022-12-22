@@ -24,6 +24,7 @@ const gameRouter = require('./router/game');
 app.use('/game', gameRouter);
 
 if(process.env.NODE_ENV=="production"){
+    console.log('abc')
     app.use(express.static('client/build'))
     const path = require('path')
     app.get("*",(req,res)=>{
