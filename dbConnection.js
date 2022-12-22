@@ -25,15 +25,15 @@ connection.query("CREATE TABLE IF NOT EXISTS user (email varchar(255) NOT NULL,u
     console.log("user table created")
   }
 })
-connection.query("CREATE TABLE IF NOT EXISTS gamestatus (id int NOT NULL AUTO_INCREMENT,status varchar(255) NOT NULL,PRIMARY KEY (id),UNIQUE KEY status (status))",(err,res)=>{
-  if(err){
-    console.log(err)
-  }
-  else{
-    console.log("gameStatus table created")
-  }
-})
-connection.query("CREATE TABLE IF NOT EXISTS game (starterId varchar(255) NOT NULL,withWhomId varchar(255) NOT NULL,status int NOT NULL DEFAULT '1',currantGame char(9) NOT NULL DEFAULT '000000000',gameId int NOT NULL AUTO_INCREMENT,lastUpdatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,PRIMARY KEY (gameId),KEY fk_game_1_idx (starterId),KEY fk_game_2_idx (withWhomId),KEY fk_game_3_idx (status),CONSTRAINT fk_game_1 FOREIGN KEY (starterId) REFERENCES user (username) ON DELETE CASCADE ON UPDATE CASCADE,CONSTRAINT fk_game_2 FOREIGN KEY (withWhomId) REFERENCES user (username),CONSTRAINT fk_game_3 FOREIGN KEY (status) REFERENCES gamestatus (id))",(err,res)=>{
+// connection.query("CREATE TABLE IF NOT EXISTS gamestatus (id int NOT NULL AUTO_INCREMENT,status varchar(255) NOT NULL,PRIMARY KEY (id),UNIQUE KEY status (status))",(err,res)=>{
+//   if(err){
+//     console.log(err)
+//   }
+//   else{
+//     console.log("gameStatus table created")
+//   }
+// })
+connection.query("CREATE TABLE IF NOT EXISTS game (starterId varchar(255) NOT NULL,withWhomId varchar(255) NOT NULL,status int NOT NULL DEFAULT '1',currantGame char(9) NOT NULL DEFAULT '000000000',gameId int NOT NULL AUTO_INCREMENT,lastUpdatedAt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,PRIMARY KEY (gameId),KEY fk_game_1_idx (starterId),KEY fk_game_2_idx (withWhomId),CONSTRAINT fk_game_1 FOREIGN KEY (starterId) REFERENCES user (username) ON DELETE CASCADE ON UPDATE CASCADE,CONSTRAINT fk_game_2 FOREIGN KEY (withWhomId) REFERENCES user (username))",(err,res)=>{
   if(err){
     console.log(err)
   }

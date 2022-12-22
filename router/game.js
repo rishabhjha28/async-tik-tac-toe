@@ -16,7 +16,7 @@ router.get('/getgame/:id',(req,res)=>{
 
 router.get('/:user',(req,res)=>{
     const {user} = req.params
-    connection.query('SELECT gameId,starterId,withWhomId,status,lastUpdatedAt FROM game where starterId = ? or withWhomId = ? order by status asc, lastUpdatedAt desc',[user,user],(err,result)=>{
+    connection.query('SELECT gameId,starterId,withWhomId,status,lastUpdatedAt FROM game where starterId = ? or withWhomId = ? order by lastUpdatedAt desc',[user,user],(err,result)=>{
         if(err){
             console.log(err)
         }
