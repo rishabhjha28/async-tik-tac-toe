@@ -2,14 +2,6 @@ const dotenv  = require('dotenv')
 dotenv.config({path:'./config.env'})
 const express = require('express')
 const app = express()
-const session = require('express-session')
-const cookieParser = require('cookie-parser')
-app.use(cookieParser())
-app.use(session({
-    resave:true,
-    saveUninitialized:true,
-    secret:'secret'
-}))
 
 const cors = require('cors')
 
