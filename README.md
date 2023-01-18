@@ -15,3 +15,13 @@ npm install && nodemon index        # install nodemon by using npm install -g no
 cd client && npm install && npm start
 # open your browser and go to 
 http://localhost:3000
+
+
+I have used nodejs/expressjs for the baackend
+mysql as the database
+In database we have two table user table and game table
+    user is the set of user nad it contain username,email,password. Username and email both must be unique unique
+    game table contain starterid(starter's username), withwhomid, gameId, lastUpdatedAt, status, curruntgame  
+and React for frontend 
+
+to log out the user we have to clear the localstorage

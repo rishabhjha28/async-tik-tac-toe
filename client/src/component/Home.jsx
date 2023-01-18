@@ -21,10 +21,18 @@ const Home = () => {
     const startgamepage= ()=>{
         navigate('startgame')
     }
+    const logOut = ()=>{
+        auth.logout()
+        localStorage.removeItem('user')
+        navigate('/')
+    }
   return (
     <div className='home-page'>
         <div className='properMargin'>
-            <p className='your-games'>Your Games</p>
+            <div className='top-bar'>
+                <p className='your-games'>Your Games</p>
+                <button onClick={logOut}>Log out</button>
+            </div>
             {
                 gameList.length === 0?<div>
                     <div className='no-games-found'>No Games Found</div>
