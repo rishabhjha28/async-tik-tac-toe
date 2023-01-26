@@ -47,11 +47,11 @@ const GamePage = () => {
               else return "Your move"
           case 3:
               if(gameData[0].starterId === auth.user) return "You Win"
-              else return opponentName +" Won!"
+              else return "You Lost"
           case 4:
               return "It's a draw!"
           case 5:
-              if(gameData[0].starterId === auth.user) return opponentName + " Won!"
+              if(gameData[0].starterId === auth.user) return "You Lost"
               else return "You Won!"
           default:
               break;
@@ -194,7 +194,7 @@ const GamePage = () => {
           <p className='yourpiece'>Your piece</p>
           <p className='xpiece'>x</p>
         </div>
-        <div className='statusinfobox'>{message1}</div>
+        <div className='statusinfobox' style={{backgroundColor:message1==='You Win'?"#219653":message1==='You Lost'?"#EB5757":'',color:message1==="You Win" || message1==="You Lost"?"white":"black"}}>{message1}</div>
           <div className='inpboxrow'>
             { 
               currantGame.map((e,i)=><div onClick={()=>{addPiece(i)}} className='inpbox' key = {i}><p className={e === 'x'?'xpiece':'opiece'}>{e}</p></div>)
@@ -205,7 +205,7 @@ const GamePage = () => {
                 <Notification color = '#EB5757' message = {message}/>
             </div>
             }
-        <BottomBox color={'#F2C94C'} message = {message2} onClickFunc={message1 === 'Your move'?submit:message2 === "Start another game"?startNewGame:blankFunc}/>
+        <BottomBox color={message1 === 'Your move' || message2 === "Start another game"?'#F2C94C':"#E0E0E0"} message = {message2} onClickFunc={message1 === 'Your move'?submit:message2 === "Start another game"?startNewGame:blankFunc}/>
       </div>
     </div>
   )
