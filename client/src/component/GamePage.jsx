@@ -52,7 +52,7 @@ const GamePage = () => {
               return "It's a draw!"
           case 5:
               if(gameData[0].starterId === auth.user) return "You Lost"
-              else return "You Won!"
+              else return "You Win!"
           default:
               break;
         }
