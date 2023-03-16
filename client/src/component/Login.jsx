@@ -17,9 +17,6 @@ const Login = () => {
   useEffect(() => {
     const loggedInUser = localStorage.getItem("user");
     if (loggedInUser) {
-      // const foundUser = JSON.parse(loggedInUser);
-      auth.login(loggedInUser)
-      // console.log(loggedInUser)
       navigate('/'+loggedInUser)
     }
   },[]);
@@ -43,7 +40,6 @@ const Login = () => {
       .then(res=>{
         if(res.data === 'logedInSuccessfully'){
           auth.login(details.userName)
-          localStorage.setItem('user', details.userName)
           navigate('/'+details.userName)
         }
         else{

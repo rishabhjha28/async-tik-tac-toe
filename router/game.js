@@ -59,7 +59,7 @@ router.post('/startgame',(req,res)=>{
                         let flag = false
                         if(result1.length > 0){
                             for(let i = 0;i < result1.length;i++){
-                                if(result1[i].status === 1){
+                                if(result1[i].status === 1 || result1[i].status === 2){
                                     res.json(result1[i].gameId)
                                     flag = true
                                     break

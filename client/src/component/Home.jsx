@@ -23,7 +23,6 @@ const Home = () => {
     }
     const logOut = ()=>{
         auth.logout()
-        localStorage.removeItem('user')
         navigate('/')
     }
   return (

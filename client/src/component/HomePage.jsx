@@ -14,9 +14,6 @@ const HomePage = () => {
   useEffect(() => {
     const loggedInUser = localStorage.getItem("user");
     if (loggedInUser) {
-      // const foundUser = JSON.parse(loggedInUser);
-      auth.login(loggedInUser)
-      // console.log(loggedInUser)
       navigate('/'+loggedInUser)
     }
   },[]);
